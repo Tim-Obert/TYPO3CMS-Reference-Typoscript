@@ -1,5 +1,48 @@
 {
   "suites": {
+    "Examples": {
+      "screenshots": {
+        "_default": [
+          {"action": "resizeWindow", "width": 1024,"height": 768},
+          {"action": "setScreenshotsDocumentationPath", "path": "Documentation"},
+          {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
+          {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
+          {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
+          {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets"}
+        ],
+        "newContent": [
+          {"include": "_default"},
+          {"action": "reloadBackend"},
+          {
+            "action": "setScreenshotsImagePath",
+            "path": "Images/AutomaticScreenshots/Fluidtemplate"
+          },
+          {
+            "action": "setScreenshotsRstPath",
+            "path": "Images/AutomaticScreenshots/Fluidtemplate"
+          },
+          {"action": "resizeWindow", "width": 1024,"height": 512},
+          {"action": "see", "text": "Page"},
+          {"action": "click", "link": "Page"},
+          {"action": "openPageTreePath", "path": ["Examples"]},
+          {"action": "switchToContentFrame"},
+          {"action": "waitForText", "text": "Examples", "timeout": 5},
+          {"action": "click", "link": "a.t3js-toggle-new-content-element-wizard"},
+          {
+            "action": "waitForModalDialogInMainFrame"
+          },
+          {"action": "waitForText", "text": "Create new content element\n", "timeout": 5},
+          {"action": "click", "link": "DataProcessing examples"},
+          {"action": "wait", "timeout":  0.1},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "DataProcessing",
+            "altText": "Overview of all data processing examples",
+            "captionText": "Overview of all data processing examples"
+          }
+        ]
+      }
+    },
     "Introduction": {
       "screenshots": {
         "_default": [
