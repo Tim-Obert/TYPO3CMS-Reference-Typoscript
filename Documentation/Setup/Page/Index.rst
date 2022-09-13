@@ -154,7 +154,6 @@ Properties
    `bodyTagAdd`_                  :ref:`data-type-string`
    `bodyTagCObject`_              :ref:`cObject <data-type-cobject>`
    `config`_                      :ref:`->CONFIG <config>`
-   `css\_inlinestyle`_            :ref:`data-type-string`
    `cssInline.[array]`_           :ref:`cObject <data-type-cobject>`
    `footerData.[array]`_          :ref:`cObject <data-type-cobject>`
    `headerData.[array]`_          :ref:`cObject <data-type-cobject>`
@@ -327,23 +326,12 @@ config
 CSS\_inlineStyle
 ================
 
-.. container:: table-row
+..  versionchanged:: 12.0
+    The TypoScript setting :typoscript:`page.CSS_inlineStyle` which was used to
+    inject a inline CSS string into the TYPO3 Frontend has been removed.
 
-   Property
-         CSS\_inlineStyle
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-         This value is just passed on as CSS.
-
-         **Note:** To make TYPO3 actually output these styles as *inline* CSS
-         (in-document CSS encapsulated in :html:`<style>` tags),
-         :ref:`config.inlineStyle2TempFile <setup-config-inlinestyle2tempfile>`
-         must be set to 0.
-
-
+    Use :ref:`page.cssInline <setup-page-cssinline>` instead, which has
+    been around since TYPO3 v4.
 
 .. index:: PAGE; cssInline.[array]
 .. _setup-page-cssinline:
